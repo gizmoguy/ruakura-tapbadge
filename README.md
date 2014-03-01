@@ -20,13 +20,17 @@ Or install it yourself as:
 
 To generate a tapbadge, first set the font file to use and then call #badge_for to return the raw PDF data
 
+```ruby
     Ruakura::Tapbadge.font_file = 'path/to/familiar_pro.ttf'
     Ruakura::Tapbadge.badge_for(name: "Shunters Yard - Midnight Special", style: "Rauchbier", abv: 5.5, full: 9.80, half: 5.70)
+```
 
 To write the PDF to a file, pass the file option to #badge_for. A value of true will return a Tempfile, or you can pass the path to where you want the file created:
 
+```ruby
     Ruakura::Tapbadge.badge_for(name: "Shunters Yard - Midnight Special", style: "Rauchbier", abv: 5.5, full: 9.80, half: 5.70, file: true)
     Ruakura::Tapbadge.badge_for(name: "Shunters Yard - Midnight Special", style: "Rauchbier", abv: 5.5, full: 9.80, half: 5.70, file: '/path/to/the.pdf')
+```
 
 Enjoy!
 
